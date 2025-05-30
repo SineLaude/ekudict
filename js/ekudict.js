@@ -69,7 +69,7 @@ $(document).ready(function() {
 		language = localStorage.getItem("eku_language");
 
 	if(!language)
-		language = "fr";
+		language = "en";
 
 	history.replaceState({ d: language, q: $("#searchfield").val() }, "", document.location.href);
 	loadDict(language, false);
