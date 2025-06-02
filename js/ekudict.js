@@ -12,6 +12,7 @@ const source_langs = {
 	U:	"Uralic",
 	B:	"Baltic",
 	T:	"Turkish",
+	A:	"Albanian",
 	X:	"mixed"
 };
 
