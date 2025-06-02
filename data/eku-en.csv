@@ -2352,7 +2352,8 @@ GRIPA,gripa,,,n.,grippe
 GRIZ,grizi,,,adj.,"grey, gray"
 GRIZ,grizzona,,,n.,greyzone
 GROB,grob,S,,n.,"grave, tomb"
-GROB,grobal/grobaria,,,n.,cemetery grof G/S n. count (nobleman)
+GROB,grobal/grobaria,,,n.,cemetery
+GROF,grof,"G,S",,n.,count (nobleman)
 GROL,grol,G,,n.,"grudge, rancor"
 GROM,grom,S,,n.,thunder
 GROM,grome,,,v.,thunder
@@ -4437,8 +4438,8 @@ NETOPEJS,netopejs,,,n.,net weight
 NEURO,neuro,,,n.,nerve
 NEURO,neurologia,,,n.,neurology
 NEUTRAL,neutrali,,,adj.,neutral
-NEUTRAL,neutrallization,,,n.,neutralization
-NEUTRAL,neutrallize,,,v.,neutralize
+NEUTRAL,neutralization,,,n.,neutralization
+NEUTRAL,neutralize,,,v.,neutralize
 NEUTRAL,neutralnis,,,n.,neutrality
 NEUTRON,neutron,,,n.,neutron
 NEVER,never,G,,adv.,never
