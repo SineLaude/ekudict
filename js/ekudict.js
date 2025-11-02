@@ -218,7 +218,7 @@ function doSearch(history) {
 								info[i] += " <i title=\"" + origs_str + "\" class=\"fa-solid fa-circle-info\"></i>";
 
 							info[i] += "<i title=\"Search for all words with root " + r[0] + "\" onclick=\"rootSearch('" + r[0] + "')\" class=\"info_button fa-solid fa-magnifying-glass-plus\"></i>";
-							if(r[4] == "v.")
+							if(r[4] == "v." && !r[1].search(" "))
 								info[i] += "<i title=\"Show verb conjugation for " + r[1] + "\" onclick=\"showConjugation(this, '" + r[1] + "')\" class=\"info_button conjugate_button fa-solid fa-table-columns\"></i>";
 
 							info[1-i] = "";
