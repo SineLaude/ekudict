@@ -119,6 +119,27 @@ function rootSearch(root) {
 	doSearch(true);
 }
 
+function showConjugation(element, verb) {
+	let forms;
+	if(verb == "ese")
+		forms = ["e", "var", "ejsi", "senti", "eseni"];
+	else
+		forms = [verb, verb + "d", verb + "jsi", verb + "nti", verb + "ni"];
+
+	let table = $.parseHTML("<table class='conjugation_table'><tr><th colspan='2'>" +
+				"<i class='fa-solid fa-circle-xmark conjugation_close_button' onclick='hideConjugation(this)'></i>" +
+				"Conjugation of <i>" + verb + "</i></th></tr>" +
+				"<tr><td>Present tense</td><td><i>" + forms[0] + "</i></td></tr>" +
+				"<tr><td>Past tense</td><td><i>" + forms[1] + "</i></td></tr>" +
+				"<tr><td>Conditional</td><td><i>" + forms[2] + "</i></td></tr>" +
+				"<tr><td>Present participle</td><td><i>" + forms[3] + "</i></td></tr>" +
+				"<tr><td>Past participle</td><td><i>" + forms[4] + "</i></td></tr></table>");
+	$(element).after(table);
+}
+
+function hideConjugation(element) {
+	$(element).parents(".conjugation_table").remove();
+}
 
 function searchEku(entry) {
 	return re.test(entry[1]);
@@ -196,7 +217,10 @@ function doSearch(history) {
 							if(origs_str.length > 0)
 								info[i] += " <i title=\"" + origs_str + "\" class=\"fa-solid fa-circle-info\"></i>";
 
-							info[i] += "<i title=\"Search for all words with root " + r[0] + "\" onclick=\"rootSearch('" + r[0] + "')\" class=\"rootsearch_button fa-solid fa-magnifying-glass-plus\"></i>";
+							info[i] += "<i title=\"Search for all words with root " + r[0] + "\" onclick=\"rootSearch('" + r[0] + "')\" class=\"info_button fa-solid fa-magnifying-glass-plus\"></i>";
+							if(r[4] == "v.")
+								info[i] += "<i title=\"Show verb conjugation for " + r[1] + "\" onclick=\"showConjugation(this, '" + r[1] + "')\" class=\"info_button conjugate_button fa-solid fa-table-columns\"></i>";
+
 							info[1-i] = "";
 
 							$(tables[i]).append("<tr><td>" + r[1+i*4].replace(re, "$1<b>$2</b>$3") + info[0] + "</td><td>" + r[5-i*4] + info[1] + "</td></tr>");

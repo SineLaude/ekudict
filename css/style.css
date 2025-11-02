@@ -106,10 +106,36 @@ input:checked + span::after {
 	cursor: help;
 }
 
-.rootsearch_button {
+.info_button {
 	float: right;
 	cursor: pointer;
 	color: #aaa !important;
+}
+
+.conjugate_button {
+	margin-right: 5px;
+}
+
+.conjugation_table {
+	margin: auto;
+}
+
+.conjugation_table i {
+	color: black !important;
+}
+
+.conjugation_table tr:nth-child(1) i {
+	color: white !important;
+}
+
+.conjugation_table tr:nth-child(1) {
+	text-align: center;
+}
+
+.conjugation_close_button {
+	color: white;
+	cursor: pointer;
+	float: right;
 }
 
 .results_table {
