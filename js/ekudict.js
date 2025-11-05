@@ -13,6 +13,7 @@ const source_langs = {
 	B:	"Baltic",
 	T:	"Turkish",
 	A:	"Albanian",
+	Q:	"Basque",
 	X:	"mixed"
 };
 
